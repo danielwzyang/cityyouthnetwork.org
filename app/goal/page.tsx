@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "City Youth Network",
-    description: "Networking for the Youth.",
+    title: "Our goal",
+    description: "Learn about our goal as an organization!",
 }
 
 export default function Page() {
