@@ -14,7 +14,7 @@ export default function Navbar() {
     return <div className="h-[90px] relative flex items-center justify-center px-5 space-x-6">
         <Link href="/" className="absolute left-5 sm:left-0 sm:relative"><Image src="/cyn500.png" alt="cyn icon" height={60} width={60} /></Link>
         <div className="hidden sm:flex gap-12 pr-3">
-            <NavigationMenu>
+            <NavigationMenu delayDuration={0}>
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className="pl-5">About</NavigationMenuTrigger>
