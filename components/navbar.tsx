@@ -11,35 +11,39 @@ import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMe
 export default function Navbar() {
     const [opened, toggleMenu] = useState(false)
 
-    return <div className="h-[90px] relative flex items-center justify-center px-5">
-        <Link href="/" className="absolute left-5 sm:relative"><Image src="/cyn500.png" alt="cyn icon" height={60} width={60} /></Link>
-        <div className="hidden sm:flex gap-10 ml-16">
+    return <div className="h-[90px] relative flex items-center justify-center px-5 space-x-6">
+        <Link href="/" className="absolute left-5 sm:left-0 sm:relative"><Image src="/cyn500.png" alt="cyn icon" height={60} width={60} /></Link>
+        <div className="hidden sm:flex gap-12 pr-3">
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                        <NavigationMenuTrigger className="pl-5">About</NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <div className="flex flex-col">
+                            <motion.div
+                                className="flex flex-col px-5 bg-[#E9DCC9] rounded-lg"
+                                initial={{ height: 0 }}
+                                animate={{ height: 125 }}
+                                transition={({ duration: 0.5 })}>
                                 {
                                     [
                                         ["branches", "Branches"],
                                         ["gallery", "Gallery"],
                                         ["goal", "Our Goal"],
-                                        ["partnerships", "Partnerships"],
+                                        ["partners", "Partners"],
                                     ]
                                         .map((e, i) => {
                                             return (
                                                 <motion.div key={i}
                                                     className="flex"
-                                                    initial={{ x: "50%", opacity: 0 }}
-                                                    animate={{ x: 0, opacity: 100 }}
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 100 }}
                                                     transition={{ duration: 0.5, delay: i * 0.075 }}>
-                                                    <Link href={`/${e[0]}`} className="text-2xl hover:text-[#CFAEAE] w-[150px]">{e[1]}</Link>
+                                                    <Link href={`/${e[0]}`} className="text-xl hover:text-[#CFAEAE]">{e[1]}</Link>
                                                 </motion.div>
                                             )
                                         })
                                 }
-                            </div>
+                            </motion.div>
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                 </NavigationMenuList>
@@ -57,16 +61,16 @@ export default function Navbar() {
                     <Menu />
                 </motion.div>
             </SheetTrigger>
-            <SheetContent className="mt-20 w-fit h-fit bg-transparent border-0 p-0 pr-8 sm:hidden" onOpenAutoFocus={(e) => e.preventDefault()}>
+            <SheetContent className="mt-20 w-fit h-fit bg-transparent border-0 p-0 sm:hidden" onOpenAutoFocus={(e) => e.preventDefault()}>
                 <SheetTitle></SheetTitle>
                 <SheetDescription></SheetDescription>
-                <div className="flex flex-col gap-1 bg-transparent">
+                <div className="flex flex-col gap-1 bg-[#E9DCC9] pl-7 pr-5 pb-5 rounded-lg">
                     {
                         [
                             ["branches", "Branches"],
                             ["gallery", "Gallery"],
                             ["goal", "Our Goal"],
-                            ["partnerships", "Partnerships"],
+                            ["partners", "Partners"],
                             ["events", "Events"],
                             ["contact", "Contact"],
                             ["donate", "Donate"]

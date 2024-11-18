@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${open_sans.className} ${crimson_pro.className} bg-[#E9DCC9] text-[#6D6E80]`}>
+            <body className={`${open_sans.className} ${crimson_pro.className} bg-[#E9DCC9] text-[#6D6E80] mb-5`}>
                 <Navbar />
                 {children}
             </body>
