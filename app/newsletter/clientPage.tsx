@@ -12,14 +12,21 @@ export default function ClientPage() {
                 e.preventDefault()
 
                 const form = e.target as HTMLFormElement
+                const email = form.email.value
 
-                const response = await fetch("/api/sheets", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ email: form.email.value })
-                })
+                let response;
+
+                if (!email || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                    response = new Response(JSON.stringify({ message: "Please provide an email." }), { status: 500 })
+                } else {
+                    response = await fetch("/api/sheets", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ email })
+                    })
+                }
 
                 form.reset()
 

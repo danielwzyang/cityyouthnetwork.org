@@ -14,8 +14,6 @@ export async function POST(request: Request) {
     try {
         const { email } = await request.json()
 
-        if (!email || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) return new Response(JSON.stringify({ message: "Please provide an email." }), { status: 500 })
-
         const spreadsheetId = "13JqeWh9fBG3exQvP8HrZV_aUSXoPFWZSdCGd3Q3z5Uw"
         const range = "List!A2:A"
 
