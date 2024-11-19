@@ -12,8 +12,8 @@ export default function Navbar() {
     const [opened, toggleMenu] = useState(false)
 
     return <div className="h-[90px] relative flex items-center justify-center px-5 space-x-6">
-        <Link href="/" className="absolute left-5 sm:left-0 sm:relative"><Image src="/cyn500.png" alt="cyn icon" height={60} width={60} /></Link>
-        <div className="hidden sm:flex gap-12 pr-3">
+        <Link href="/" className="absolute left-5 md:left-0 md:relative"><Image src="/cyn500.png" alt="cyn icon" height={60} width={60} /></Link>
+        <div className="hidden md:flex gap-12 pr-3">
             <NavigationMenu delayDuration={0}>
                 <NavigationMenuList>
                     <NavigationMenuItem>
@@ -51,9 +51,10 @@ export default function Navbar() {
             <Link href="/events" className="text-2xl hover:text-[#CFAEAE]">Events</Link>
             <Link href="/contact" className="text-2xl hover:text-[#CFAEAE]">Contact</Link>
             <Link href="/donate" className="text-2xl hover:text-[#CFAEAE]">Donate</Link>
+            <Link href="/newsletter" className="text-2xl hover:text-[#CFAEAE]">Newsletter</Link>
         </div>
         <Sheet onOpenChange={(open) => toggleMenu(open)}>
-            <SheetTrigger className="h-10 w-10 flex justify-center items-center absolute right-5 sm:hidden">
+            <SheetTrigger className="h-10 w-10 flex justify-center items-center absolute right-5 md:hidden">
                 <motion.div
                     initial={{ rotate: 0 }}
                     animate={opened ? { rotate: 180 } : { rotate: 0 }}
@@ -61,7 +62,7 @@ export default function Navbar() {
                     <Menu />
                 </motion.div>
             </SheetTrigger>
-            <SheetContent className="mt-20 w-fit h-fit bg-transparent border-0 p-0 sm:hidden" onOpenAutoFocus={(e) => e.preventDefault()}>
+            <SheetContent className="mt-20 w-fit h-fit bg-transparent border-0 p-0 md:hidden" onOpenAutoFocus={(e) => e.preventDefault()}>
                 <SheetTitle></SheetTitle>
                 <SheetDescription></SheetDescription>
                 <div className="flex flex-col gap-1 bg-[#E9DCC9] pl-7 pr-5 pb-5 rounded-lg">
