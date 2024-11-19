@@ -20,9 +20,9 @@ export default function Navbar() {
                         <NavigationMenuTrigger className="pl-5">About</NavigationMenuTrigger>
                         <NavigationMenuContent>
                             <motion.div
-                                className="flex flex-col px-5 bg-[#E9DCC9] rounded-lg"
+                                className="flex flex-col px-5 py-3 bg-[#E9DCC9] rounded-lg border border-[#c8c8c8]"
                                 initial={{ height: 0 }}
-                                animate={{ height: 125 }}
+                                animate={{ height: "fit-content" }}
                                 transition={({ duration: 0.5 })}>
                                 {
                                     [
@@ -65,7 +65,7 @@ export default function Navbar() {
             <SheetContent className="mt-20 w-fit h-fit bg-transparent border-0 p-0 md:hidden" onOpenAutoFocus={(e) => e.preventDefault()}>
                 <SheetTitle></SheetTitle>
                 <SheetDescription></SheetDescription>
-                <div className="flex flex-col gap-1 bg-[#E9DCC9] pl-7 pr-5 pb-5 rounded-lg">
+                <div className="flex flex-col gap-1 bg-[#E9DCC9] mt-2 pl-7 pr-5 py-5 rounded-lg border border-[#c8c8c8]">
                     {
                         [
                             ["branches", "Branches"],
@@ -74,13 +74,14 @@ export default function Navbar() {
                             ["partners", "Partners"],
                             ["events", "Events"],
                             ["contact", "Contact"],
-                            ["donate", "Donate"]
+                            ["donate", "Donate"],
+                            ["newsletter", "Newsletter"]
                         ]
                             .map((e, i) => {
                                 return (
                                     <motion.div key={i}
                                         className="flex justify-end"
-                                        initial={{ x: "100%" }}
+                                        initial={{ x: "150%" }}
                                         animate={{ x: 0 }}
                                         transition={{ duration: 0.5, delay: i * 0.075 }}>
                                         <Link href={`/${e[0]}`} className="text-2xl hover:text-[#CFAEAE] text-right">{e[1]}</Link>
