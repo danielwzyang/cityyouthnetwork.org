@@ -10,6 +10,7 @@
 
 .fc-day {
     border: 1px solid #c8c8c8 !important;
+
 }
 
 .fc-day-today {
@@ -30,4 +31,9 @@
 
 .fc-event {
     background: #7aa8d4;
+    padding: 5px;
+}
+
+.fc-event-title {
+    text-wrap: balance;
 }

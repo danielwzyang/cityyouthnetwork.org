@@ -1,8 +1,6 @@
-import { getSheets, setAuth } from "../auth"
+import { getSheets } from "../auth"
 
-
-export async function POST(request: Request) {  
-    setAuth()
+export async function POST(request: Request) {
     const sheets = await getSheets()
     
     try {

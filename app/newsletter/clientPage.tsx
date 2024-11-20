@@ -14,6 +14,9 @@ export default function ClientPage() {
                 const form = e.target as HTMLFormElement
                 const email = form.email.value
 
+                form.reset()
+                setResult("Please wait...")
+
                 let response;
 
                 if (!email || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
@@ -27,8 +30,6 @@ export default function ClientPage() {
                         body: JSON.stringify({ email })
                     })
                 }
-
-                form.reset()
 
                 const data = await response.json()
 

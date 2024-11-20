@@ -6,7 +6,8 @@ import { useEffect, useState } from "react"
 
 interface Event {
     start: {
-        date: string
+        date: string,
+        dateTime: string
     },
     summary: string
 }
@@ -26,7 +27,9 @@ export default function Events() {
             const data = await response.json()
 
             const eventList = data.events.map((( e: Event ) => {
-                return { title: e.summary, date: e.start.date }
+                const date = e.start.date || e.start.dateTime.substring(0, 10)
+
+                return { title: e.summary, date }
             }))
 
             setEvents(eventList)

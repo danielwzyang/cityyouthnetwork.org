@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
+import { setAuth } from "./api/auth"
 
 export const metadata: Metadata = {
     title: "City Youth Network",
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
+    setAuth()
+
     return (
         <div>
             <Image
