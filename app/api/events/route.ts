@@ -1,6 +1,6 @@
 import { getCalendar, setAuth } from "../auth"
 
-export async function GET(request: Request) {
+export async function GET() {
     setAuth()
     const calendar = await getCalendar()
     try {
