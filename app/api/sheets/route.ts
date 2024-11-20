@@ -1,16 +1,10 @@
-import { google } from "googleapis"
+import { getSheets, setAuth } from "../auth"
 
-const auth = new google.auth.GoogleAuth({
-    credentials: {
-        private_key: process.env.PRIVATE_KEY,
-        client_email: process.env.EMAIL
-    },
-    scopes: ["https://www.googleapis.com/auth/spreadsheets"]
-})
-
-const sheets = google.sheets({ version: "v4", auth })
 
 export async function POST(request: Request) {  
+    setAuth()
+    const sheets = await getSheets()
+    
     try {
         const { email } = await request.json()
 

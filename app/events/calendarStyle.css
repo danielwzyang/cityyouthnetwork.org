@@ -1,0 +1,33 @@
+.fc-scrollgrid {
+    border-radius: 2%;
+    border: 1px solid #c8c8c8 !important;
+    background: #E9DCC9;
+}
+
+.fc-toolbar-title {
+    color: #555663;
+}
+
+.fc-day {
+    border: 1px solid #c8c8c8 !important;
+}
+
+.fc-day-today {
+    background: #edd8c8 !important;
+}
+
+.fc-button {
+    background-color: #ede4d5 !important;
+    color: #555663 !important;
+    padding: 4px !important;
+    border: 1px solid #d7d0c3 !important;
+}
+
+.fc-today-button {
+    padding-right: 7px !important;
+    padding-left: 7px !important;
+}
+
+.fc-event {
+    background: #7aa8d4;
+}
