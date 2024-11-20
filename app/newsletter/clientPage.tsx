@@ -38,8 +38,8 @@ export default function ClientPage() {
             }}
                 className="flex flex-wrap items-center gap-3 justify-center mx-10">
                 
-                <input name="email" placeholder={result ? result : "Email:"} className="sm:text-xl text-[#454659] placeholder-[#6D6E80] bg-[#ede4d5] border-[#C8C8C8] rounded-lg text-center p-2 px-5 w-[250px] sm:w-[300px]" />
-                <button type="submit" className="sm:text-xl text-[#ffecec] border w-fit rounded-lg bg-[#7acad4] hover:bg-[#7aa8d4] p-2 px-4 ">Subscribe</button>
+                <input name="email" placeholder={result ? result : "Email:"} className="sm:text-xl text-[#454659] placeholder-[#6D6E80] bg-[#ede4d5] border-[#C8C8C8] rounded-xl text-center p-2 px-5 w-[250px] sm:w-[300px]" />
+                <button type="submit" className="sm:text-xl text-[#ffecec] border w-fit rounded-xl bg-[#7acad4] hover:bg-[#7aa8d4] p-2 px-4 ">Subscribe</button>
             </form>
             <h1 className="sm:text-xl"></h1>
         </div>
