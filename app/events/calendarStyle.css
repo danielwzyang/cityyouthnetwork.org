@@ -1,3 +1,8 @@
+:root {
+    --fc-list-event-hover-bg-color: #ebdfca;
+    --fc-list-event-dot-width: 0px;
+}
+
 .fc-scrollgrid {
     border-radius: 2%;
     border: 1px solid #c8c8c8 !important;
@@ -34,6 +39,18 @@
     padding: 5px;
 }
 
+.fc-list-empty {
+    background: #E9DCC9 !important;
+}
+
+.fc-list-event {
+    background: #ede4d5 !important;
+}
+
 .fc-event-title {
     text-wrap: balance;
+}
+
+.fc-cell-shaded {
+    background: #e6d7be !important;
 }

@@ -2,6 +2,7 @@
 
 import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
+import listPlugin from "@fullcalendar/list"
 import { useEffect, useState } from "react"
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "./dialog"
 import dayjs from "dayjs"
@@ -50,7 +51,7 @@ export default function Events() {
 
     return <div className="w-[80vw] max-w-[1000px]">
         <FullCalendar
-            plugins={[dayGridPlugin]}
+            plugins={[dayGridPlugin, listPlugin]}
             events={events}
             fixedWeekCount={false}
             contentHeight="auto"
@@ -63,6 +64,14 @@ export default function Events() {
                 const time = props.eventTime ? dayjs(props.eventTime, "HH:mm").format("h:mm A") : ""
                 setOpen(true)
                 setEvent({ title: event.title, desc: props.desc, time })
+            }}
+            initialView={window.innerWidth < 700 ? "listMonth" : "dayGridMonth"}
+            displayEventTime={false}
+            views={{
+                listMonth: {
+                    type: "listWeek",
+                    duration: { days: 30 }
+                }
             }}
         />
         <Dialog open={open} onOpenChange={setOpen}>
