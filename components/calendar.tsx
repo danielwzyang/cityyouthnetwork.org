@@ -23,6 +23,9 @@ export default function Events() {
     const [events, setEvents] = useState([])
     const [open, setOpen] = useState(false)
     const [curEvent, setEvent] = useState({ title: "", desc: "", time: "" })
+    const [view, setView] = useState(
+        typeof window !== "undefined" && window.innerWidth < 700 ? "listMonth" : "dayGridMonth"
+    )
 
     useEffect(() => {
         async function fetchEvents() {
@@ -65,7 +68,7 @@ export default function Events() {
                 setOpen(true)
                 setEvent({ title: event.title, desc: props.desc, time })
             }}
-            initialView={window.innerWidth < 700 ? "listMonth" : "dayGridMonth"}
+            initialView={view}
             displayEventTime={false}
             views={{
                 listMonth: {

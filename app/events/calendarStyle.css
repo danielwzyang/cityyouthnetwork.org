@@ -1,6 +1,6 @@
 :root {
     --fc-list-event-hover-bg-color: #ebdfca;
-    --fc-list-event-dot-width: 0px;
+    --fc-list-event-dot-width: 0px !important;
 }
 
 .fc-scrollgrid {
