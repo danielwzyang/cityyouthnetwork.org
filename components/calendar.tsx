@@ -4,7 +4,7 @@ import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
 import listPlugin from "@fullcalendar/list"
 import { useEffect, useState } from "react"
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "./dialog"
+import { Dialog, DialogContent, DialogTitle } from "./dialog"
 import dayjs from "dayjs"
 import customParseFormat from "dayjs/plugin/customParseFormat"
 
