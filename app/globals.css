@@ -13,6 +13,10 @@ body {
     background-color: #f2f1ea;
 }
 
+.bg2 {
+    background-color: #fbf8f4;
+}
+
 .lighter {
     color: #4a4a57;
 }
@@ -151,10 +155,37 @@ body {
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+
+    body {
+        @apply bg-background text-foreground;
     }
+}
+
+@keyframes slow-pulse-spin {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.05) rotate(90deg);
+    }
+
+    50% {
+        transform: scale(1) rotate(180deg);
+    }
+
+    75% {
+        transform: scale(1.05) rotate(270deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+.slow-pulse-spin {
+    animation: slow-pulse-spin 120s linear infinite;
 }

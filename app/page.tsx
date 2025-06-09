@@ -1,15 +1,14 @@
-import Navbar from "@/components/navbar"
 import Image from "next/image"
+import Link from "next/link"
+import Layout from "@/components/layout"
 
 export default function Home() {
-    return <div>
-        <Navbar />
-
+    return <Layout>
         <div className="flex flex-col items-center pb-10">
             <h1 className="text-center text-5xl sm:text-7xl font-extrabold grotesque mb-2">
                 City Youth <br /> Network
             </h1>
-            <h1 className="text-center text-xl sm:text-3xl font-bold mb-2">
+            <h1 className="text-center text-xl sm:text-3xl font-bold mb-2 lighter">
                 empowering nyc youth
             </h1>
         </div>
@@ -50,11 +49,50 @@ export default function Home() {
             </svg>
         </div>
 
-        <div className="p-8">
-            <p className="text-lg">
-                test
-            </p>
-        </div>
+        <div className="p-8 flex flex-col items-center">
+            <h1 className="text-center text-3xl sm:text-5xl font-extrabold grotesque">
+                Our Programs
+            </h1>
+            <h2 className="w-[500px] font-medium text-lg sm:text-2xl max-w-[80%] mt-4 mb-8 text-center text-balance lighter">
+                engaging and impactful opportunities for students
+            </h2>
 
-    </div>
+            <div className="flex flex-wrap items-center justify-center gap-18 mx-8">
+                <div className="relative w-[400px] max-w-[80%]">
+                    <img src="/shape1.svg" alt="shape1" className="w-full slow-pulse-spin" />
+                    <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
+                        <h1 className="text-2xl sm:text-3xl font-bold grotesque text-center mb-1">
+                            City Social
+                        </h1>
+                        <h2 className="lighter text-base sm:text-md mb-5">
+                            Roy Zhang, February 2024
+                        </h2>
+
+                        <Link href="https://docs.google.com/document/d/1iLQa2PYaomOAxR9BlXeFcMVBQx1nr19zATvZzFQSDXE/" className="grotesque text-md sm:text-lg font-extrabold text-white">
+                            <div className="py-3 px-5 bg-[#fbba39] rounded-xl hover:scale-[1.05] transition duration-300">
+                                learn more
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+                <div className="relative w-[400px] max-w-[80%]">
+                    <img src="/shape2.svg" alt="shape2" className="w-full slow-pulse-spin" />
+                    <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
+                        <h1 className="text-2xl sm:text-3xl font-bold grotesque text-center mb-1">
+                            Opportunities Initiative
+                        </h1>
+                        <h2 className="lighter text-base sm:text-md mb-5">
+                            Caleb Lee, February 2024
+                        </h2>
+
+                        <Link href="https://docs.google.com/document/d/1WU_aHsxh2VyxW1yb3lolloF0LSETUbjcnW8PpOLGwFI/" className="grotesque text-md sm:text-lg font-extrabold text-white">
+                            <div className="py-3 px-5 bg-[#66b2ff] rounded-xl hover:scale-[1.05] transition duration-300">
+                                learn more
+                            </div>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Layout>
 }
