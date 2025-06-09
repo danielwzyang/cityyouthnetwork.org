@@ -9,10 +9,20 @@ interface Props {
     API_KEY: string
 }
 
-const colors = []
+interface Event {
+    id: string
+    summary: string
+    htmlLink: string
+    start: {
+        dateTime?: string
+        date: string
+    }
+    description?: string
+    location?: string
+}
 
 export default function Client(props: Props) {
-    const [events, setEvents] = useState<any[]>([])
+    const [events, setEvents] = useState<Event[]>([])
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -67,13 +77,13 @@ export default function Client(props: Props) {
                                             </h1>
 
                                             <h2 className="text-base sm:text-md mb-2">
-                                                {event.start?.dateTime
+                                                {event.start.dateTime
                                                     ? new Date(event.start.dateTime).toLocaleDateString("en-US", {
                                                         year: "numeric",
                                                         month: "long",
                                                         day: "numeric"
                                                     })
-                                                    : new Date(event.start?.date).toLocaleDateString("en-US", {
+                                                    : new Date(event.start.date).toLocaleDateString("en-US", {
                                                         year: "numeric",
                                                         month: "long",
                                                         day: "numeric"
