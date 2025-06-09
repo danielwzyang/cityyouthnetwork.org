@@ -49,17 +49,22 @@ export default function Home() {
             </svg>
         </div>
 
-        <div className="p-8 flex flex-col items-center">
-            <h1 className="text-center text-3xl sm:text-5xl font-extrabold grotesque">
-                Our Programs
-            </h1>
-            <h2 className="w-[500px] font-medium text-lg sm:text-2xl max-w-[80%] mt-4 mb-8 text-center text-balance lighter">
-                engaging and impactful opportunities for students
-            </h2>
+        <div className="p-8 flex flex-col items-center mt-5">
+            <div className="xl:hidden relative w-[425px] max-w-[80%] mb-16">
+                <img src="/shape3.svg" alt="shape3" className="w-full slow-pulse-spin" />
+                <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
+                    <h1 className="text-center text-3xl sm:text-5xl font-extrabold grotesque mb-2">
+                        Our Programs
+                    </h1>
+                    <h2 className="w-[500px] font-medium text-lg sm:text-xl max-w-[80%] text-center text-balance lighter">
+                        engaging and impactful opportunities for students
+                    </h2>
+                </div>
+            </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-18 mx-8">
-                <div className="relative w-[400px] max-w-[80%]">
-                    <img src="/shape1.svg" alt="shape1" className="w-full slow-pulse-spin" />
+            <div className="flex flex-wrap items-center justify-center gap-18 xl:gap-0 mx-8">
+                <div className="relative w-[375px] max-w-[80%]">
+                    <img src="/shape2.svg" alt="shape2" className="w-full slow-pulse-spin" />
                     <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
                         <h1 className="text-2xl sm:text-3xl font-bold grotesque text-center mb-1">
                             City Social
@@ -75,8 +80,21 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-                <div className="relative w-[400px] max-w-[80%]">
-                    <img src="/shape2.svg" alt="shape2" className="w-full slow-pulse-spin" />
+
+                <div className="hidden xl:block relative w-[425px] max-w-[80%] m-[-50px] z-2">
+                    <img src="/shape3.svg" alt="shape3" className="w-full slow-pulse-spin" />
+                    <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
+                        <h1 className="text-center text-3xl sm:text-5xl font-extrabold grotesque mb-2">
+                            Our Programs
+                        </h1>
+                        <h2 className="w-[500px] font-medium text-lg sm:text-xl max-w-[80%] text-center text-balance lighter">
+                            engaging and impactful opportunities for students
+                        </h2>
+                    </div>
+                </div>
+
+                <div className="relative w-[375px] max-w-[80%]">
+                    <img src="/shape4.svg" alt="shape2" className="w-full slow-pulse-spin" />
                     <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
                         <h1 className="text-2xl sm:text-3xl font-bold grotesque text-center mb-1">
                             Opportunities Initiative

@@ -25,7 +25,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.variable} ${space_grotesk.variable} antialiased`}
+                className={`${inter.variable} ${space_grotesk.variable} antialiased max-w-full overflow-x-clip`}
             >
                 {children}
             </body>

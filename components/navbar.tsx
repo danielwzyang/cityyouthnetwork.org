@@ -16,9 +16,6 @@ export default function Navbar() {
 
             <div className="hidden md:flex w-full">
                 <div className="flex gap-10">
-                    <Link href="/about" className="grotesque text-xl font-medium underline-hover">
-                        about us
-                    </Link>
                     <Link href="/gallery" className="grotesque text-xl font-medium underline-hover">
                         gallery
                     </Link>
@@ -53,9 +50,6 @@ export default function Navbar() {
                         align="end"
                         side="bottom"
                     >
-                        <DropdownMenuItem>
-                            <Link href="/about" className="ml-auto text-lg">about us</Link>
-                        </DropdownMenuItem>
                         <DropdownMenuItem>
                             <Link href="/gallery" className="ml-auto text-lg">gallery</Link>
                         </DropdownMenuItem>
