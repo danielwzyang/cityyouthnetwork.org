@@ -27,7 +27,7 @@ export default function Client(props: Props) {
 
     useEffect(() => {
         async function fetchEvents() {
-            const date = new Date()
+            const date = new Date(new Date().toLocaleString("en-US", { timeZone: "America/New_York" }))
             date.setHours(0, 0, 0, 0)
 
             const res = await fetch(
