@@ -9,7 +9,7 @@ import {
 
 export default function Navbar() {
     return (
-        <div className="p-5 items-center gap-10 mx-5 relative flex">
+        <div className="p-5 items-center gap-10 mx-2 relative flex">
             <Link href="/">
                 <Image src="/logo.png" alt="logo" width={50} height={50} />
             </Link>
@@ -18,13 +18,13 @@ export default function Navbar() {
                 <div className="flex gap-10">
                     <Link href="/gallery" className="grotesque text-xl font-medium underline-hover">
                         gallery
-                    </Link>
+                    </Link> 
                     <Link href="/events" className="grotesque text-xl font-medium underline-hover">
                         events
                     </Link>
                 </div>
 
-                <Link href="/contact" className="grotesque text-xl font-medium underline-hover ml-auto">
+                <Link href="/contact" className="grotesque text-xl font-medium underline-hover ml-auto mr-2">
                     contact us
                 </Link>
             </div>
